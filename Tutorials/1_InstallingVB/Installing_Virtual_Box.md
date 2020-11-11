@@ -4,7 +4,7 @@ Here are the key links for all the things to do and parts you'll need to get sta
 
 ## Before the session
 Download VirtualBox for your operating system here: https://www.virtualbox.org/wiki/Downloads  
-Download the .iso file for a stable version of Ubuntu, here: https://ubuntu.com/download/desktop  
+Download the .iso file for the most recent LTS (Long Term Support) version of Ubuntu, here: https://ubuntu.com/download/desktop  
 ^ This step can take a while! 
 
 ## In the session
