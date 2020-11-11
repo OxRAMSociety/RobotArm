@@ -1,3 +1,4 @@
+The instructions here are complementary to this presentation: https://docs.google.com/presentation/d/1Qumn36j2WhzlIH6uK6YIfPuLTGeUQtcqjGAUU_t7FPc/edit#slide=id.ga15f7c0449_0_1726
 ## ROS Installation 
 ### ROS Installation Instructions
 The ROS website has really nice instructions for installing ROS. This might take a while as ROS is a pretty hefty software. 
