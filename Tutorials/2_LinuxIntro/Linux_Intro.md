@@ -28,13 +28,13 @@ We're going to cover the basics of naviating the terminal in your Ubuntu, specif
 
 If we work through that quickly, we may move on to some basic scripts:
 
-5. Making a bash script
+9. Making a bash script
     - nano \<file name>.sh
     - Include "#!/bin/bash" as first line
     - Try a basic script like: echo "Hello World"
-6. Assigning permissions to run
+10. Assigning permissions to run
     - chmod a+x \<file name>.sh
-7. Running the scripts
+11. Running the scripts
     - ./\<file name>.sh
 
 
