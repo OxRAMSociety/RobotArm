@@ -7,7 +7,7 @@ Please make sure you've completeed the aims of the last session and have a funct
 
 ## In the session
 
-We're going to cover the basics of naviating the terminal in your Ubuntu, specifically:
+We're going to cover the basics of navigating the terminal in your Ubuntu, specifically:
 
 1. Naviating between folders 
     - cd \<folder path>
