@@ -30,7 +30,7 @@ you should see something like this:
 #### Creating a ROS package 
 Follow these instructions: http://wiki.ros.org/ROS/Tutorials/CreatingPackage
 #### Installing a ROS package 
-```sudo apt install ros-melodic-<package-name>```
+```sudo apt-get install ros-melodic-<package-name>```
 #### Useful Commands   
 1) ```rospack list```: lists all packages installed in your ROS (this would list like 180+ packages)
 2) ```rospack find <package-name>```: find the directory of a single package (can use to see if package exists) 
