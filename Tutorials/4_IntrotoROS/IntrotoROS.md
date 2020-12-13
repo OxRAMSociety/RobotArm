@@ -13,8 +13,8 @@ From terminal 3 you should be able to drive a little turtle around. You have jus
 ### Creating a catkin workspace 
 The catkin structure simplifies the build and installation processes for ROS packages so its useful to have a catkin workspace. At a time you only have one active catkin workspace.
 1) ```source /opt/ros/melodic/setup.bash```
-2) ```mkdir -p ~/catkin_ws/src```
-3) ```cd ~/catkin_ws/```
+2) ```mkdir -p ~/arm_ws/src```
+3) ```cd ~/arm_ws/```
 4) ```catkin_make``` (catkin make is a nice tool for working with a catkin workspace) 
 You should now see a ```src```,```devel```,```build``` folder.
 
