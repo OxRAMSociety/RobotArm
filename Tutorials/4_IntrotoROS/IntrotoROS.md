@@ -38,8 +38,15 @@ Follow these instructions: http://wiki.ros.org/ROS/Tutorials/CreatingPackage
 To run the master, open a new terminal window and run the command: 
 ```roscore``` 
 When you ran the turtlesim, this is why you ran this code. 
-## Optional Installations 
+## Optional Installations/Commands to run
 a) **Tmux**: ROS often involves you to open many terminal windows. This can be annoying to work sometimes so Tmux helps you split your current terminal into many terminal windows. 
 
 Follow this link to install: https://linuxize.com/post/getting-started-with-tmux/
+
+b) **Adding lines to bashrc**: You might have noticed that you have had to repeat the same commands over and over again when you open a new terminal. This can be tedious so to avoid that what you can do is modify the bashrc file. This file is run every time you open a new terminal automatically so any commands in this file will be run as well. 
+
+For example, say we want to **source the melodic environmental files** every time we open a new terminal:
+1) Type in command line  ```nano ~/.bashrc``` (should open a text editor) 
+2) Scroll all the way to the bottom of the file and paste/type the following line: ```source /opt/ros/melodic/setup.bash```
+
 
