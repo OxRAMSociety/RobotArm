@@ -20,7 +20,10 @@ You should now see a ```src```,```devel```,```build``` folder.
 
 We now want to tell ROS that this catkin workspace is the workspace we want to activate. To do this run: 
 1) ```source devel/setup.bash```
-
+2) To check if everything is sourced properly, run: 
+```echo $ROS_PACKAGE_PATH```
+you should see something like this:
+```/home/[youruser]/[ws name]/src:/opt/ros/melodic/share```
  
 ## Getting to know ROS 
 ### Packages
