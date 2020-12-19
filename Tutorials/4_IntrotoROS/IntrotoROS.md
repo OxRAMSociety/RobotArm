@@ -45,6 +45,11 @@ If you want to try installing a package, try these:
 To run the master, open a new terminal window and run the command: 
 ```roscore``` 
 When you ran the turtlesim, this is why you ran this code. 
+### Nodes 
+1) To start a node (node is a ROS program) use the command ```rosrun```: ```rosrun [package-name] [executable-name]```
+2)  ```rosnode list```: lists current running nodes (/rosout is the node associated with the master) 
+3) ```rosnode info [node-name]```: you can get some information about a particular node 
+
 ## Optional Installations/Commands to run
 a) **Tmux**: ROS often involves you to open many terminal windows. This can be annoying to work sometimes so Tmux helps you split your current terminal into many terminal windows. 
 
