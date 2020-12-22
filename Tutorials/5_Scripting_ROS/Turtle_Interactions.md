@@ -127,7 +127,7 @@ if __name__ == "__main__":
 You must then provide it with running permissions by:  
 `chmod a+x move_turtle.py`  
 
-### 3. Activating Script Control (aka running a ROS script)
+### 3. Activating Script Control (aka running the ROS script)
 To see the fuits of your labours, open up your terminals as you would normally when runnning the turtle: 
 
 `roscore`  
