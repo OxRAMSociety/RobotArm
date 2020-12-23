@@ -54,6 +54,7 @@ When you ran the turtlesim, this is why you ran this code.
 1) ```rostopic list```: lists all running topics 
 2) ```rostopic echo topic-name ```: prints what is being published on a given topic 
 3) ```rostopic info topic-name```: get more informationa about the topic (who is subscribing/who is publishing etc)
+4) ```rosmsg info topic-name```: get info abotu what is contained in a message
 
 
 ## Optional Installations/Commands to run

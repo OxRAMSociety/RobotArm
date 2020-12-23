@@ -77,7 +77,6 @@ def move(speed, duration=5):
         velocity_publisher.publish(velocity_message)
         # Sleep to enforce the message rate
         loop_rate.sleep()
-
 ```
 
 Finally, we have to a make this script license this code as a node then run the move command when called. We use a `try/except` condition to make sure that if something interrups the ROS running in the background our code doesn't fall over in the process. 
