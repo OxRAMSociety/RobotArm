@@ -49,7 +49,9 @@ loop_rate = rospy.Rate(10)
 velocity_publisher = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10)
 ```
 
-In addition to creating a "publisher" node we created a `loop_rate` at which it outputs values. As a simple example, let's combine our knowledge into a function to move the turtle forward for a set amount of time, called `move()`
+In addition to creating a "publisher" node we created a `loop_rate` at which it outputs values. Ensuring the data is published at a reliable frequency allows us to send messages consistently, without overloading the ROS Core node. The `queue_size` parameter instructs ROS to maintain a memory of the last `10` published results, as it is possible for a Subscriber node to miss previous messages and need to catch up on them (i.e. a Subscribers processing time may be logner than the time between messages, and this has to be accomondated for.)  
+
+As a simple example, let's combine our knowledge into a function to move the turtle forward for a set amount of time, called `move()`
 
 ```python
 #!/usr/bin/env python
