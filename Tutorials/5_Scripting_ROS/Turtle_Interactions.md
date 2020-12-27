@@ -31,7 +31,7 @@ Navigate to the package folder we made before (`cd ~/catkin_ws/src/turtle_script
 ROS enablees the passing of many different message types (topics) between nodes. For this example, we will be creating a `Twist` message to match the format of `cmd_vel`. The Twist message type contains a `linear` and `angular` component in 3 dimensions (`x`, `y`, and `z`), but we will only care about `x` and `y` as the `turtlesim` is 2D. Generating a message of this type can be done like this in Python.
 
 ```python
-for geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist
 
 velocity_message = Twist()
 velocity_message.linear.x = 5
@@ -59,7 +59,7 @@ As a simple example, let's combine our knowledge into a function to move the tur
 import rospy
 import time
 
-for geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist
 
 def move(speed, duration=5):
     # Create the publisher
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     try: 
         rospy.init_node("move_forward", anonymous=True)
         move(2)
-    except rospy.ROSInterruptxception:
+    except rospy.ROSInterruptException:
         pass
 ```
 
@@ -98,7 +98,7 @@ Great! Combine these two together into a single script, I called mine `move_turt
 import rospy
 import time
 
-for geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist
 
 def move(speed, duration=5):
     # Create the publisher
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     try: 
         rospy.init_node("move_forward", anonymous=True)
         move(2)
-    except rospy.ROSInterruptxception:
+    except rospy.ROSInterruptException:
         pass
 ```
 
@@ -140,3 +140,53 @@ then to give your code control by running:
 `rosrun turtle_scripts move_turtle.py` (replacing names with your own)  
 
 and watch it plow headfirst into a wall! These are humble beginnings, but with these tools (and with one more bit of instrution about litening with **Subscribers**) we're well on our way to knowing all of the essentials for control a ROS robot.
+
+## 4. Listening with a Subscriber
+Listening to the outputs from a Topic can be achieved with a `ropsy.Subscriber`, which is designed to listen into a topic and run a function the user defines when the value changes. In our code, we created a function to extract the `x`, `y`, and `theta` values, save them to global variables, and then print them to the console. The changes to the code can be seen here: 
+
+```python
+#!/usr/bin/env python
+
+import rospy
+import time
+
+from geometry_msgs.msg import Twist
+from turtlesim.msg import Pose
+
+
+x, y, theta = 0, 0, 0
+def poseCallback(pose_message):
+    global x, y, theta
+    x = pose_message.x
+    y = pose_message.y
+    theta = pose_message.theta
+    print(x, y, theta)
+
+
+def move(speed, duration=5):
+    # Create the publisher
+    loop_rate = rospy.Rate(10)
+    velocity_publisher = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10)
+    # Create the forward velocity message
+    velocity_message = Twist()
+    velocity_message.linear.x = speed
+    # Publish the message for "duration" seconds
+    start_time = time.time()
+    while (time.time() - start_time) < duration:
+        # Log that this action was taken
+        rospy.loginfo("Turtle goes forward!")
+        # Publish
+        velocity_publisher.publish(velocity_message)
+        # Sleep to enforce the message rate
+        loop_rate.sleep()
+
+if __name__ == "__main__":
+    try: 
+        rospy.init_node("move_forward", anonymous=True)
+        pose_subscriber = rospy.Subscriber("/turtle1/pose", Pose, poseCallback)
+        move(2)
+        # optional, spin the node to keep printing the pose info
+        # rospy.spin()
+    except rospy.ROSInterruptException:
+        pass
+```
