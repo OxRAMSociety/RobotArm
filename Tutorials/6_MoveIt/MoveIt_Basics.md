@@ -33,4 +33,8 @@ I've included a basic script called `arm_move.py` which should placed in the `sr
 
 and making sure you've source the workspace since your `catkin` build. If you added the `source ` command to your bashrc file, the quickest way to resource is to reopen your terminal. Once that's done, you can call this script using the usual `rosrun` invocation:
 
-`rosrun <your_package_name> arm_move`
+`rosrun <your_package_name> arm_move`  
+
+N.B: you will need to have the demo code to activate RViz running too, invoked with: 
+
+`roslaunch panda_moveit_config demo.launch`
