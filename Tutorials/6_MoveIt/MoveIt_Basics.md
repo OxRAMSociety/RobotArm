@@ -63,6 +63,6 @@ and then use `rosrun` with the corresponding `arm_move` script to move it! (No p
 
 There's a lot for us to explore here, but this week's challenges are:
 
-1. Joint Limits: Find out the limits of each of the Panda arm joints
+1. Joint Limits: Find out the limits of each of the Moveo arm joints
 2. 3D Stretch: Make the arm full extend, including gripper position. 
-3. Box Spin: Put you arm at one extreme stretch, create and pick up box, then place it down after reotation 180 degrees. 
+3. Box Spin: Put you arm at one extreme stretch, create and pick up box, then place it down after rotation 180 degrees. 
