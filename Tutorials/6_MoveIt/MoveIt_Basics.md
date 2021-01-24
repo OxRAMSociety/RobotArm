@@ -52,7 +52,7 @@ then copy and paste the
 
 files into your active moveit workspace `src` folder.  
 
-Then, use whichever version of `catkin_make` or `catkin build` you have been using to remake your moveo packages.  
+Then, use whichever version of `catkin_make` or `catkin build` you have been using to remake your moveit workspace.  
 
 To run the arm, instead of the previous `demo.launch` commands, instead run:
 
