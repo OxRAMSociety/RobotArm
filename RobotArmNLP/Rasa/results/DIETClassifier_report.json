@@ -1,0 +1,44 @@
+{
+  "Communication Ability": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "Intensity": {
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1-score": 0.28571428571428575,
+    "support": 5
+  },
+  "Frequency": {
+    "precision": 0.5,
+    "recall": 0.25,
+    "f1-score": 0.3333333333333333,
+    "support": 4
+  },
+  "Setting": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "micro avg": {
+    "precision": 0.4,
+    "recall": 0.18181818181818182,
+    "f1-score": 0.25000000000000006,
+    "support": 11
+  },
+  "macro avg": {
+    "precision": 0.25,
+    "recall": 0.1125,
+    "f1-score": 0.15476190476190477,
+    "support": 11
+  },
+  "weighted avg": {
+    "precision": 0.4090909090909091,
+    "recall": 0.18181818181818182,
+    "f1-score": 0.2510822510822511,
+    "support": 11
+  }
+}

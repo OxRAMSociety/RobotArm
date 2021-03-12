@@ -1,0 +1,128 @@
+[
+  {
+    "text": "He has a very short temper and lashes out [hitting] (Intensity) myself and others during tantrums and has recently began screaming as loud as he can during these tantrums. How can I quickly help him to regulate these emotions and acts of frustration and anger without being angry myself?",
+    "entities": [
+      {
+        "start": 121,
+        "end": 130,
+        "value": "screaming",
+        "entity": "Intensity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Intensity",
+        "start": 43,
+        "end": 50,
+        "value": "hitting",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Frequency",
+        "start": 202,
+        "end": 210,
+        "value": "regulate",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Yesterday I’ve had a plate thrown at my face, he has a tendency to throw stuff a lot nowadays and always responds with no.",
+    "entities": [
+      {
+        "start": 55,
+        "end": 63,
+        "value": "tendency",
+        "entity": "Frequency"
+      },
+      {
+        "start": 67,
+        "end": 72,
+        "value": "throw",
+        "entity": "Intensity"
+      },
+      {
+        "start": 85,
+        "end": 93,
+        "value": "nowadays",
+        "entity": "Frequency"
+      },
+      {
+        "start": 98,
+        "end": 104,
+        "value": "always",
+        "entity": "Frequency"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Frequency",
+        "start": 85,
+        "end": 93,
+        "value": "nowadays",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Communication Ability",
+        "start": 98,
+        "end": 104,
+        "value": "always",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "She will often hit her head on the floor very hard and will not stop until she is picked up.",
+    "entities": [
+      {
+        "start": 15,
+        "end": 18,
+        "value": "hit",
+        "entity": "Intensity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "He never wants clothes on but then at the end of the day it's the same screaming when we have to take them off",
+    "entities": [
+      {
+        "start": 3,
+        "end": 8,
+        "value": "never",
+        "entity": "Frequency"
+      },
+      {
+        "start": 15,
+        "end": 22,
+        "value": "clothes",
+        "entity": "Setting"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "To have him use more words to express his [needs] (Communication Ability)/what's rather than throw himself on the ground crying and becoming impossible to console.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 37,
+        "value": "express",
+        "entity": "Communication Ability"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "For example, he'll be playing with his toys, but then yells \"No!\" and throws his toys.",
+    "entities": [
+      {
+        "start": 70,
+        "end": 76,
+        "value": "throws",
+        "entity": "Intensity"
+      }
+    ],
+    "predicted_entities": []
+  }
+]
