@@ -1,72 +1,75 @@
 [
   {
-    "text": "rotate joint 1 by 10 degrees",
+    "text": "King to d1",
     "entities": [
       {
         "start": 0,
-        "end": 6,
-        "value": "rotate",
-        "entity": "action"
+        "end": 4,
+        "value": "King",
+        "entity": "Piece_Type"
       },
       {
-        "start": 7,
-        "end": 14,
-        "value": "joint 1",
-        "entity": "link"
-      },
-      {
-        "start": 18,
-        "end": 28,
-        "value": "10 degrees",
-        "entity": "angle"
+        "start": 8,
+        "end": 10,
+        "value": "d1",
+        "entity": "Target_Position"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "action",
+        "entity": "Piece_Type",
         "start": 0,
-        "end": 6,
-        "value": "rotate",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "angle",
-        "start": 13,
-        "end": 14,
-        "value": "1",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "angle",
-        "start": 18,
-        "end": 20,
-        "value": "10",
+        "end": 4,
+        "confidence_entity": 0.9979482293128967,
+        "value": "King",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "pickup the blue box",
+    "text": "Grab this rook for me",
     "entities": [
       {
-        "start": 11,
-        "end": 15,
-        "value": "blue",
-        "entity": "color"
-      },
-      {
-        "start": 16,
-        "end": 19,
-        "value": "box",
-        "entity": "object"
+        "start": 10,
+        "end": 14,
+        "value": "rook",
+        "entity": "Capture_Piece"
       }
     ],
     "predicted_entities": [
       {
-        "entity": "object",
-        "start": 16,
+        "entity": "Piece_Type",
+        "start": 10,
+        "end": 14,
+        "confidence_entity": 0.9993939399719238,
+        "value": "rook",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Move his pond at f8 from the board",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "pond",
+        "entity": "Capture_Piece"
+      },
+      {
+        "start": 17,
         "end": 19,
-        "value": "box",
+        "value": "f8",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9978389143943787,
+        "value": "pond",
         "extractor": "DIETClassifier"
       }
     ]

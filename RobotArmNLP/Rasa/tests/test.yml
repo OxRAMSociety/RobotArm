@@ -1,0 +1,24 @@
+version: "2.0"
+
+nlu:
+- intent: Move_Piece 
+  examples: |
+    - Move the [bishop](Piece_Type) to [c6](Target_Position)
+    - [King](Piece_Type) to [d1](Target_Position)
+- intent: Reset 
+  examples: |
+    - Reset the board please 
+    - I want to reset 
+- intent: Stop 
+  examples: |
+    - Stop! 
+    - Can you stop please  
+- intent: Resign
+  examples: | 
+    - I want to resign 
+    - You win 
+- intent: Capture 
+  examples: | 
+    - Grab this [rook](Capture_Piece) for me 
+    - Move his [pond](Capture_Piece) at [f8](Target_Position) from the board  
+    

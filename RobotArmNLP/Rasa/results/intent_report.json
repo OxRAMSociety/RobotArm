@@ -1,29 +1,52 @@
 {
-  "grab": {
+  "Stop": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1,
-    "confused_with": {}
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "Reset": 1
+    }
   },
-  "move": {
+  "Capture": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 2,
     "confused_with": {}
   },
-  "accuracy": 1.0,
-  "macro avg": {
+  "Reset": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
+  "Resign": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 3
+    "support": 2,
+    "confused_with": {}
+  },
+  "Move_Piece": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "accuracy": 0.9,
+  "macro avg": {
+    "precision": 0.9333333333333332,
+    "recall": 0.9,
+    "f1-score": 0.8933333333333333,
+    "support": 10
   },
   "weighted avg": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
+    "precision": 0.9333333333333332,
+    "recall": 0.9,
+    "f1-score": 0.8933333333333333,
+    "support": 10
   }
 }

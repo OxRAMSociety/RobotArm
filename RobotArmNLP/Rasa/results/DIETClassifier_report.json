@@ -1,50 +1,43 @@
 {
-  "action": {
-    "precision": 1.0,
+  "Piece_Type": {
+    "precision": 0.6666666666666666,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
   },
-  "angle": {
-    "precision": 0.5,
+  "Capture_Piece": {
+    "precision": 1.0,
     "recall": 0.5,
-    "f1-score": 0.5,
-    "support": 2
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "Piece_Type": 1
+    }
   },
-  "link": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 2
-  },
-  "object": {
+  "Target_Position": {
     "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 1
-  },
-  "color": {
-    "precision": 0.0,
-    "recall": 0.0,
-    "f1-score": 0.0,
-    "support": 1
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 3,
+    "confused_with": {}
   },
   "micro avg": {
     "precision": 0.8,
-    "recall": 0.5,
-    "f1-score": 0.6153846153846154,
-    "support": 8
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6666666666666666,
+    "support": 7
   },
   "macro avg": {
-    "precision": 0.5,
-    "recall": 0.5,
-    "f1-score": 0.5,
-    "support": 8
+    "precision": 0.8888888888888888,
+    "recall": 0.611111111111111,
+    "f1-score": 0.6555555555555556,
+    "support": 7
   },
   "weighted avg": {
-    "precision": 0.5,
-    "recall": 0.5,
-    "f1-score": 0.5,
-    "support": 8
+    "precision": 0.9047619047619048,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6333333333333334,
+    "support": 7
   }
 }
