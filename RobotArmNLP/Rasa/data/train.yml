@@ -29,8 +29,8 @@ nlu:
   examples: | 
     - Hey arm, capture the [white queen](Capture_Piece) for me will you
     - Capture the [b4](Target_Position) piece 
-    - Grab his [pond](Capture_Piece) at [c7](Target_Position)
-    - Kill his [pond](Capture_Piece)
+    - Grab his [pawn](Capture_Piece) at [c7](Target_Position)
+    - Kill his [pawn](Capture_Piece)
     - Move the [queen](Capture_Piece) in [b5](Target_Position) away from the board 
 
 

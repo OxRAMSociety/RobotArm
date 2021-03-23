@@ -20,7 +20,7 @@
         "entity": "Piece_Type",
         "start": 0,
         "end": 4,
-        "confidence_entity": 0.9979482293128967,
+        "confidence_entity": 0.9987698197364807,
         "value": "King",
         "extractor": "DIETClassifier"
       }
@@ -41,35 +41,8 @@
         "entity": "Piece_Type",
         "start": 10,
         "end": 14,
-        "confidence_entity": 0.9993939399719238,
+        "confidence_entity": 0.9987416863441467,
         "value": "rook",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "Move his pond at f8 from the board",
-    "entities": [
-      {
-        "start": 9,
-        "end": 13,
-        "value": "pond",
-        "entity": "Capture_Piece"
-      },
-      {
-        "start": 17,
-        "end": 19,
-        "value": "f8",
-        "entity": "Target_Position"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "Capture_Piece",
-        "start": 9,
-        "end": 13,
-        "confidence_entity": 0.9978389143943787,
-        "value": "pond",
         "extractor": "DIETClassifier"
       }
     ]

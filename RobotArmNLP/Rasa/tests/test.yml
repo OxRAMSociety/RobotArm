@@ -20,5 +20,5 @@ nlu:
 - intent: Capture 
   examples: | 
     - Grab this [rook](Capture_Piece) for me 
-    - Move his [pond](Capture_Piece) at [f8](Target_Position) from the board  
+    - Move his [pawn](Capture_Piece) at [f8](Target_Position) from the board  
     

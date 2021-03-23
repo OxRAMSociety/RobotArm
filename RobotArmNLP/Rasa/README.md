@@ -19,6 +19,7 @@ Useful Resources: https://rasa.com/docs/rasa/components
 	- Does intent recognition and entity recognition together 
 	- Based on a transformer architecture (has been pretty successful for more general NLP) 
 	- ***Could be interesting to test***
+	- Optimizing this classifier: https://botfront.io/blog/better-intent-classification-and-entity-extraction-with-diet-classifier-pipeline-optimization
 
 ### Entity Extractor 
 1) MitieEntityExtractor

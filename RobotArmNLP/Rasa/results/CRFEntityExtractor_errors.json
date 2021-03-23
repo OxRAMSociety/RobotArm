@@ -1,0 +1,152 @@
+[
+  {
+    "text": "Move the bishop to c6",
+    "entities": [
+      {
+        "start": 9,
+        "end": 15,
+        "value": "bishop",
+        "entity": "Piece_Type"
+      },
+      {
+        "start": 19,
+        "end": 21,
+        "value": "c6",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Piece_Type",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9656730558166399,
+        "value": "bishop",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "Piece_Type",
+        "start": 9,
+        "end": 15,
+        "confidence_entity": 0.9967161417007446,
+        "value": "bishop",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Target_Position",
+        "start": 19,
+        "end": 21,
+        "confidence_entity": 0.9728183746337891,
+        "value": "c6",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "King to d1",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "King",
+        "entity": "Piece_Type"
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "value": "d1",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Piece_Type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.6744617095326189,
+        "value": "King",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "Piece_Type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9974821209907532,
+        "value": "King",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Target_Position",
+        "start": 8,
+        "end": 10,
+        "confidence_entity": 0.9243682026863098,
+        "value": "d1",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Grab this rook for me",
+    "entities": [
+      {
+        "start": 10,
+        "end": 14,
+        "value": "rook",
+        "entity": "Capture_Piece"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 10,
+        "end": 14,
+        "confidence_entity": 0.993693470954895,
+        "value": "rook",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Move his pawn at f8 from the board",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "pawn",
+        "entity": "Capture_Piece"
+      },
+      {
+        "start": 17,
+        "end": 19,
+        "value": "f8",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.8670245020837141,
+        "value": "pawn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "Capture_Piece",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9890680909156799,
+        "value": "pawn",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Target_Position",
+        "start": 17,
+        "end": 19,
+        "confidence_entity": 0.9983639121055603,
+        "value": "f8",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

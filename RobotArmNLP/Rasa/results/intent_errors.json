@@ -4,7 +4,7 @@
     "intent": "Stop",
     "intent_prediction": {
       "name": "Reset",
-      "confidence": 0.9498901963233948
+      "confidence": 0.8297836184501648
     }
   }
 ]

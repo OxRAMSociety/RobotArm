@@ -1,11 +1,4 @@
 {
-  "Piece_Type": {
-    "precision": 0.6666666666666666,
-    "recall": 1.0,
-    "f1-score": 0.8,
-    "support": 2,
-    "confused_with": {}
-  },
   "Capture_Piece": {
     "precision": 1.0,
     "recall": 0.5,
@@ -17,27 +10,34 @@
   },
   "Target_Position": {
     "precision": 1.0,
-    "recall": 0.3333333333333333,
-    "f1-score": 0.5,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
     "support": 3,
     "confused_with": {}
   },
+  "Piece_Type": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 2,
+    "confused_with": {}
+  },
   "micro avg": {
-    "precision": 0.8,
-    "recall": 0.5714285714285714,
-    "f1-score": 0.6666666666666666,
+    "precision": 0.8333333333333334,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7692307692307692,
     "support": 7
   },
   "macro avg": {
     "precision": 0.8888888888888888,
-    "recall": 0.611111111111111,
-    "f1-score": 0.6555555555555556,
+    "recall": 0.7222222222222222,
+    "f1-score": 0.7555555555555555,
     "support": 7
   },
   "weighted avg": {
     "precision": 0.9047619047619048,
-    "recall": 0.5714285714285714,
-    "f1-score": 0.6333333333333334,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.761904761904762,
     "support": 7
   }
 }

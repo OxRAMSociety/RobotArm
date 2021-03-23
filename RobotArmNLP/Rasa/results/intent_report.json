@@ -8,13 +8,6 @@
       "Reset": 1
     }
   },
-  "Capture": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
   "Reset": {
     "precision": 0.6666666666666666,
     "recall": 1.0,
@@ -30,6 +23,13 @@
     "confused_with": {}
   },
   "Move_Piece": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "Capture": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
