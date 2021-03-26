@@ -1,0 +1,246 @@
+$ease: all .6s cubic-bezier(0.23, 1, 0.32, 1);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.button {
+	will-change: transform;
+	$size: 140px;
+	width: $size;
+	height: $size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #5fb5fe;
+	border-radius: 50%;
+	transform-origin: left top;
+	transition: $ease;
+	cursor: pointer;
+	
+	&-wrapper {
+		height: 100vh;
+		width: 100vw;
+		overflow: hidden;
+		background: lighten(black, 10);
+	}
+	
+	&-svg {
+		$size: 80px;
+		width: $size;
+		height: $size;
+		fill: white;
+		transition: $ease;
+	}
+	
+	&:hover {
+		
+		svg {
+			fill: rgba(black, 0.2);
+		}
+	}
+}
+
+.active-wrapper {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	visibility: hidden;
+	opacity: 0;
+	transition: $ease;
+	
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		
+		.dots-col {
+			transform: rotateX(0);
+		}
+	}
+}
+
+.stop-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin-bottom: 6vh;
+	background: rgba(black, 0.3);
+	border-radius: 50%;
+	cursor: pointer;
+	
+	&-svg {
+		fill: white;
+		$size: 40px;
+		width: $size;
+		height: $size;
+		transition: $ease;
+	}
+	
+	&:hover {
+		background: rgba(black, 0.45);
+		
+		svg {
+			fill: tomato;
+		}
+	}
+}
+
+.dots {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	perspective: 400px;
+	
+	&-col {
+		margin: 15px;
+		transform: rotateX(-90deg);
+		transform-origin: bottom center;
+		transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		
+		@media (max-width: 600px) {
+			margin: 9px;
+		}
+	}
+	
+	&-dot {
+		$size: 20px;
+		width: $size;
+		height: $size;
+		background: white;
+		opacity: 0.3;
+		border-radius: 50%;
+		margin: 15px 0;
+		
+		@media (max-width: 600px) {
+			$size: 13px;
+			width: $size;
+			height: $size;
+			margin: 9px 0;
+		}
+	}
+}
+
+@for $i from 4 through 6 {
+	.dots-col:nth-child(1) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .6s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.06s;
+	}
+}
+
+@for $i from 3 through 6 {
+	.dots-col:nth-child(2) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .7s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.08s;
+	}
+}
+
+@for $i from 2 through 6 {
+	.dots-col:nth-child(3) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.04s;
+	}
+}
+
+@for $i from 3 through 6 {
+	.dots-col:nth-child(4) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .9s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.05s;
+	}
+}
+
+@for $i from 2 through 6 {
+	.dots-col:nth-child(5) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.06s;
+	}
+}
+
+@for $i from 2 through 6 {
+	.dots-col:nth-child(6) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup 1s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.06s;
+	}
+}
+
+@for $i from 3 through 6 {
+	.dots-col:nth-child(7) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .9s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.05s;
+	}
+}
+
+@for $i from 4 through 6 {
+	.dots-col:nth-child(8) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .9s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.05s;
+	}
+}
+
+@for $i from 5 through 6 {
+	.dots-col:nth-child(9) > .dots-dot:nth-child(#{$i}) {
+		animation: lightup .8s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		animation-delay: $i * -0.05s;
+	}
+}
+
+@keyframes lightup {
+	0% {
+		opacity: 0.3;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	75% {
+		opacity: 1;
+	}
+	
+	100% {
+		opacity: 0.3;
+	}
+}
+
+.logo {
+  position: fixed;
+  bottom: 3vh;
+  right: 3vw;
+  z-index: 2;
+  
+  
+  img {
+    width: 65px;
+    transition: $ease;
+    transform: rotate(0);
+  
+    &:hover {
+      transform: rotate(180deg) scale(1.1);
+    }
+  }
+}

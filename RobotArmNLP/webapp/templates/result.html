@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="apptitle">
+			OxRAM Voice Command App
+		</div>
+		<h2>Speech to Intents/Entities</h2>
+		
+	</div>
+	</header>
+	<p id = "predict_title"><b>Did I understand you correctly?</b></p>
+	<div class="results">
+		<p> Message: {{message}} </p>
+		<p> Results: {{prediction}} </p>
+	</div>
+	}
+	}
+
+</body>
+</html>
