@@ -14,7 +14,11 @@ header{
 
 }
 
-
+p{
+  font-style: Calibri;
+  text-align:center;
+  font-size: 25px;
+}
 .main-header{
       text-align:center;
       background-color: red;
@@ -88,7 +92,7 @@ header h2{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 35vh;
+  height: 25vh;
   background-color: #ff;
 }
 

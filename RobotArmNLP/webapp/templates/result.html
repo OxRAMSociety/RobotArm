@@ -24,9 +24,9 @@
 	  <p style="font-size:20px"> Message: {{message}} </p>
 	  <p style="font-size:20px"> Results: {{prediction}} </p>
 	  <div class="switch">	
-	    <input type="radio" name="choice" id="yes" checked>
+	    <input type="radio" name="choice" id="yes">
 	    <label for="yes">Yes</label>
-	    <input type="radio" name="choice" id="no">
+	    <input type="radio" name="choice" id="no" onclick="javascript:window.location.href='/'; return false;">
 	    <label for="no">No</label>
 	    <span class="switchFilter"></span>
 	  </div>

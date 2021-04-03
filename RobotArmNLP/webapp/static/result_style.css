@@ -17,10 +17,11 @@ header{
 h2 {
   font-size: 2rem;
   margin: 0.2em 0;
-
 }
 
-
+.cd-switch h2{
+  color:#d72638;
+}
 
 
 

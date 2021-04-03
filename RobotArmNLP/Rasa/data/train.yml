@@ -7,6 +7,18 @@ nlu:
     - [Bishop](Piece_Type) to [a3](Target_Position)
     - Umm can you move the [rook](Piece_Type) from [d3](Start_Position) to [d8](Target Position)
     - Move my [king](Piece_Type) [one](Target_Position) step to the [right](Target_Position)
+- intent: Move_Piece_Relative 
+  examples: |
+    - Move [queen](Piece_Type) to the [left](Direction)
+    - Move [bishop](Piece_Type) [up](Direction) by [one](Magnitude) spot 
+    - Move [pawn](Piece_Type) to the [right](Direction) by [3](Magnitude) spaces
+    - Can you move my [knight](Piece_Type) to [back](Direction)  by 7 spots 
+
+- intent: Move_Piece_Relative_Diagonal
+  examples: |
+    - Move my [rook](Piece_Type) diagonally [up](Directiony) and to the [left](Directionx) by [4](Magnitude) spots 
+    - Can you move by [bishop](Piece_Type) diagonally to the [lower](Directionx) [right](Directiony) [corner](Magnitude) 
+    - Can you move by [pawn](Piece_Type) diagonally by [5](Magnitude) spaces 
 - intent: Reset 
   examples: |
     - Can you reset the board 
@@ -32,5 +44,6 @@ nlu:
     - Grab his [pawn](Capture_Piece) at [c7](Target_Position)
     - Kill his [pawn](Capture_Piece)
     - Move the [queen](Capture_Piece) in [b5](Target_Position) away from the board 
+
 
 

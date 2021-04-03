@@ -1,12 +1,17 @@
 {
-  "Stop": {
+  "Move_Piece": {
     "precision": 1.0,
-    "recall": 0.5,
-    "f1-score": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 1.0,
     "support": 2,
-    "confused_with": {
-      "Reset": 1
-    }
+    "confused_with": {}
+  },
+  "Move_Piece_Relative_Diagonal": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
   },
   "Reset": {
     "precision": 0.6666666666666666,
@@ -22,13 +27,6 @@
     "support": 2,
     "confused_with": {}
   },
-  "Move_Piece": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 2,
-    "confused_with": {}
-  },
   "Capture": {
     "precision": 1.0,
     "recall": 1.0,
@@ -36,17 +34,33 @@
     "support": 2,
     "confused_with": {}
   },
-  "accuracy": 0.9,
+  "Move_Piece_Relative": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "Stop": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {
+      "Reset": 1
+    }
+  },
+  "accuracy": 0.9230769230769231,
   "macro avg": {
-    "precision": 0.9333333333333332,
-    "recall": 0.9,
-    "f1-score": 0.8933333333333333,
-    "support": 10
+    "precision": 0.9523809523809523,
+    "recall": 0.9285714285714286,
+    "f1-score": 0.9238095238095239,
+    "support": 13
   },
   "weighted avg": {
-    "precision": 0.9333333333333332,
-    "recall": 0.9,
-    "f1-score": 0.8933333333333333,
-    "support": 10
+    "precision": 0.9487179487179487,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.917948717948718,
+    "support": 13
   }
 }

@@ -21,4 +21,11 @@ nlu:
   examples: | 
     - Grab this [rook](Capture_Piece) for me 
     - Move his [pawn](Capture_Piece) at [f8](Target_Position) from the board  
+- intent: Move_Piece_Relative 
+  examples: | 
+    - Move the rook one spot to the left 
+    - Hey can you move my queen up a space 
+- intent: Move_Piece_Relative_Diagonal 
+  examples: |
+    - Hey can you move the the queen diagonally [up](Directiony) and to the [right](Directionx) by [2](Magnitude) spaces 
     
