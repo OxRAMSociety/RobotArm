@@ -1,0 +1,41 @@
+{
+  "Piece_Type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "Target_Position": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "Capture_Piece": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.42857142857142855,
+    "f1-score": 0.6,
+    "support": 7
+  },
+  "macro avg": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5,
+    "f1-score": 0.5555555555555555,
+    "support": 7
+  },
+  "weighted avg": {
+    "precision": 0.5714285714285714,
+    "recall": 0.42857142857142855,
+    "f1-score": 0.47619047619047616,
+    "support": 7
+  }
+}

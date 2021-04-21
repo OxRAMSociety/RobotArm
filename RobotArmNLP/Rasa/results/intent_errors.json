@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Can you stop please",
+    "intent": "Stop",
+    "intent_prediction": {
+      "name": "Reset",
+      "confidence": 0.5035845041275024
+    }
+  }
+]

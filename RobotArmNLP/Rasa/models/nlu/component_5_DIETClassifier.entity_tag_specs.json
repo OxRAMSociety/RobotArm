@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-Capture_Piece",
+      "2": "I-Capture_Piece",
+      "3": "L-Capture_Piece",
+      "4": "U-Capture_Piece",
+      "5": "B-Piece_Type",
+      "6": "I-Piece_Type",
+      "7": "L-Piece_Type",
+      "8": "U-Piece_Type",
+      "9": "B-Start_Position",
+      "10": "I-Start_Position",
+      "11": "L-Start_Position",
+      "12": "U-Start_Position",
+      "13": "B-Target Position",
+      "14": "I-Target Position",
+      "15": "L-Target Position",
+      "16": "U-Target Position",
+      "17": "B-Target_Position",
+      "18": "I-Target_Position",
+      "19": "L-Target_Position",
+      "20": "U-Target_Position",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-Capture_Piece": 1,
+      "I-Capture_Piece": 2,
+      "L-Capture_Piece": 3,
+      "U-Capture_Piece": 4,
+      "B-Piece_Type": 5,
+      "I-Piece_Type": 6,
+      "L-Piece_Type": 7,
+      "U-Piece_Type": 8,
+      "B-Start_Position": 9,
+      "I-Start_Position": 10,
+      "L-Start_Position": 11,
+      "U-Start_Position": 12,
+      "B-Target Position": 13,
+      "I-Target Position": 14,
+      "L-Target Position": 15,
+      "U-Target Position": 16,
+      "B-Target_Position": 17,
+      "I-Target_Position": 18,
+      "L-Target_Position": 19,
+      "U-Target_Position": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

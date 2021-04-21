@@ -1,0 +1,169 @@
+[
+  {
+    "text": "King to d1",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "King",
+        "entity": "Piece_Type"
+      },
+      {
+        "start": 8,
+        "end": 10,
+        "value": "d1",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Piece_Type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9985431432723999,
+        "value": "King",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Grab this rook for me",
+    "entities": [
+      {
+        "start": 10,
+        "end": 14,
+        "value": "rook",
+        "entity": "Capture_Piece"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Move his pawn at f8 from the board",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "pawn",
+        "entity": "Capture_Piece"
+      },
+      {
+        "start": 17,
+        "end": 19,
+        "value": "f8",
+        "entity": "Target_Position"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.7914214730262756,
+        "value": "pawn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Move the rook one spot to the left",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Magnitude",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.6279985904693604,
+        "value": "one",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Directionx",
+        "start": 30,
+        "end": 34,
+        "confidence_entity": 0.4972861707210541,
+        "value": "left",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hey can you move my queen up a space",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.7993789911270142,
+        "value": "queen",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Directiony",
+        "start": 26,
+        "end": 28,
+        "confidence_entity": 0.5854679346084595,
+        "value": "up",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Hey can you move the the queen diagonally up and to the right by 2 spaces",
+    "entities": [
+      {
+        "start": 42,
+        "end": 44,
+        "value": "up",
+        "entity": "Directiony"
+      },
+      {
+        "start": 56,
+        "end": 61,
+        "value": "right",
+        "entity": "Directionx"
+      },
+      {
+        "start": 65,
+        "end": 66,
+        "value": "2",
+        "entity": "Magnitude"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Capture_Piece",
+        "start": 25,
+        "end": 30,
+        "confidence_entity": 0.8540006875991821,
+        "value": "queen",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Directiony",
+        "start": 42,
+        "end": 44,
+        "confidence_entity": 0.6543541550636292,
+        "value": "up",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Directiony",
+        "start": 56,
+        "end": 61,
+        "confidence_entity": 0.5047816038131714,
+        "value": "right",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Magnitude",
+        "start": 65,
+        "end": 66,
+        "confidence_entity": 0.8995130062103271,
+        "value": "2",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: eezybot_description
+    relative_path: src\urdf\ebamk2.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config\ebamk2.srdf
+  CONFIG:
+    author_name: "OxRAM Robot Arm Team "
+    author_email: oxramsoc@gmail.com
+    generated_timestamp: 1617293692

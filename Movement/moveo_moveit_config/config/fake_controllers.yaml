@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_moveo_arm_controller
+    joints:
+      - Joint_1
+      - Joint_2
+      - Joint_3
+      - Joint_4
+      - Joint_5
+  - name: fake_hand_controller
+    joints:
+      - Gripper_Idol_Gear_Joint
+      - Gripper_Servo_Gear_Joint
+initial:  # Define initial robot poses.
+  - group: moveo_arm
+    pose: home

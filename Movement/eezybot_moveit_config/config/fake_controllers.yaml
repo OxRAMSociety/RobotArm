@@ -1,0 +1,12 @@
+controller_list:
+  - name: fake_eezybot_arm_controller
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+  - name: fake_hand_controller
+    joints:
+      - joint_6
+initial:  # Define initial robot poses.
+  - group: eezybot_arm
+    pose: home

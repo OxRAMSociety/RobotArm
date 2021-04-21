@@ -1,0 +1,64 @@
+{
+  "Magnitude": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 1,
+    "confused_with": {}
+  },
+  "Target_Position": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 3,
+    "confused_with": {}
+  },
+  "Piece_Type": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "Directionx": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1,
+    "confused_with": {
+      "Directiony": 1
+    }
+  },
+  "Directiony": {
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "f1-score": 0.5,
+    "support": 1,
+    "confused_with": {}
+  },
+  "Capture_Piece": {
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "f1-score": 0.4,
+    "support": 2,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "f1-score": 0.5454545454545454,
+    "support": 10
+  },
+  "macro avg": {
+    "precision": 0.5277777777777778,
+    "recall": 0.6388888888888888,
+    "f1-score": 0.5111111111111111,
+    "support": 10
+  },
+  "weighted avg": {
+    "precision": 0.65,
+    "recall": 0.6,
+    "f1-score": 0.5466666666666666,
+    "support": 10
+  }
+}
