@@ -48,7 +48,7 @@ box_data = None
 model = torch.hub.load('ultralytics/yolov5', 'yolov5m', pretrained=True)
 vs = cv2.VideoCapture(0)
 # Load COCO class names
-with open("Code/Computer Vision/rsc/coco.names") as coco_file:
+with open("Computer Vision/rsc/coco.names") as coco_file:
     class_names = coco_file.read().split("\n")
 # model.classes = range(1, len(class_names))
 
