@@ -1,0 +1,16 @@
+controller_list:
+  - name: fake_rbx1_arm_controller
+    joints:
+      - joint_1_base_shoulder
+      - joint_2_shoulder_arm
+      - joint_3_arm_upper_forearm
+      - joint_4_upper_forearm_forearm
+      - joint_5_forearm_wrist
+      - joint_6_wrist_hand
+  - name: fake_hand_controller
+    joints:
+      - gripper_idol_gear_joint
+      - gripper_servo_gear_joint
+initial:  # Define initial robot poses.
+  - group: rbx1_arm
+    pose: home

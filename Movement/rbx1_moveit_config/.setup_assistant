@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: rbx1_urdf
+    relative_path: urdf\rbx1.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config\rbx1_urdf.srdf
+  CONFIG:
+    author_name: "Sneha Ramshanker "
+    author_email: sneha.ramshanker@pmb.ox.ac.uk
+    generated_timestamp: 1619913489
