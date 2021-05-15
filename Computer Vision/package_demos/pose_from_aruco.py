@@ -66,8 +66,8 @@ while active:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Unidistort the image
-    map1, map2 = cv2.fisheye.initUndistortRectifyMap(mtx, dist, np.eye(3), mtx, img.shape[:2][::-1], cv2.CV_16SC2)
-    img = cv2.remap(img, map1, map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+    map1, map2 = cv2.fisheye.initUndistortRectifyMap(mtx, dist, np.eye(3), mtx, gray.shape[:2][::-1], cv2.CV_16SC2)
+    img = cv2.remap(gray, map1, map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
 
     #### Do aruco stuff
 
