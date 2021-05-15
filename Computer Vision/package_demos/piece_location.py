@@ -116,4 +116,6 @@ while active:
 
     cv2.imshow('img',img)
     cv2.waitKey(1)
-    
+
+
+# TODO; Add key to capture frames, and triangulate positions from them
