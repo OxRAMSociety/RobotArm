@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Create a script to move the arm straight up, then wave!
+# This script acts as a test for basic functions by which to control the arm
 
 import sys
 import rospy
@@ -94,6 +94,7 @@ def jmove(j1,j2,j3,j4,j5,j6):
 
 def pmove(coords,rotation_vector,rotation_angle):
 	# Sets a Pose Goal for a given set of inputs (in Cartesian coords.) and moves accordingly
+	# The orientation of the EEF is defined in quarternions, which I have translated into a 3D vector (that gets normalised) which acts as an axis about which to rotate, and an angle by which to rotate about this axis
 	global eef_link
 	pose_goal = geometry_msgs.msg.Pose()
 	print(pose_goal)
@@ -191,18 +192,3 @@ pmove((0.1,0.15,0.1),(0,0,1),-90)
 pmove((0.1,0.05,0.1),(0,0,1),-90)
 pmove((0,0.05,0.1),(0,0,1),-90)
 pmove((0,0.15,0.1),(0,0,1),-90)
-
-#pose_goal = geometry_msgs.msg.Pose()
-#pose_goal.orientation.x = 0.0
-#pose_goal.orientation.y = 0.0
-#pose_goal.orientation.z = 0.0
-#pose_goal.orientation.w = 1.0
-#pose_goal.position.x = 0.0
-#pose_goal.position.y = 0.15
-#pose_goal.position.z = 0.35
-#arm.set_pose_target(pose_goal)
-
-#plan = arm.go(wait=True)
-#arm.stop()
-
-#arm.clear_pose_targets()
