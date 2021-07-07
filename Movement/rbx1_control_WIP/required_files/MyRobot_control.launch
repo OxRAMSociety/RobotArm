@@ -1,0 +1,21 @@
+<launch>
+    
+  <rosparam file="$(find YOUR_PACKAGE_NAME)/config/controllers.yaml" command="load"/>
+  <rosparam file="$(find YOUR_PACKAGE_NAME)/config/joint_limits.yaml" command="load"/>
+
+​
+
+  <node name="MyRobotHardwareInterface" pkg="YOUR_PACKAGE_NAME" type="MyRobot_hardware_inerface_node" output="screen"/>
+
+​
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/ >
+    
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+        args="
+            /MyRobot/joints_update
+            /MyRobot/arm_controller
+        "/> 
+
+
+</launch>

@@ -95,6 +95,9 @@ def jmove(j1,j2,j3,j4,j5,j6):
 def pmove(coords,rotation_vector,rotation_angle):
 	# Sets a Pose Goal for a given set of inputs (in Cartesian coords.) and moves accordingly
 	# The orientation of the EEF is defined in quarternions, which I have translated into a 3D vector (that gets normalised) which acts as an axis about which to rotate, and an angle by which to rotate about this axis
+	# I have found a lower bound for the locus of points to which the arm can always move, described by the following inequality:
+	#				~~~ x^2 + (y + 0.2425)^2 + (z - 0.1864)^2 <= 0.19717 ~~~
+	# If it's not working, check that your destination is achievable!
 	global eef_link
 	pose_goal = geometry_msgs.msg.Pose()
 	print(pose_goal)

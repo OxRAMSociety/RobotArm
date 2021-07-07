@@ -1,0 +1,25 @@
+MyRobot:
+
+
+    # Publish all joint states
+    joints_update:
+      type: joint_state_controller/JointStateController
+      publish_rate: 50
+    
+    arm_controller:                                               # Name of the controller
+      type: effort_controllers/JointTrajectoryController          # Since our joints use effort interface this controller type is used      
+      joints:
+        - joint_1_base_shoulder
+        - joint_2_shoulder_arm
+        - joint_3_arm_forearm
+        - joint_4_upper_forearm_forearm
+        - joint_5_forearm_wrist
+        - joint_6_wrist_hand
+
+      gains:							  # Required because we're controlling an effort interface
+	joint_1_base_shoulder: {p: 100, d: 1, i: 1, i_clamp: 1}                                    # PID values
+	joint_2_shoulder_arm: {p: 100, d: 1, i: 1, i_clamp: 1}
+	joint_3_arm_forearmr: {p: 100, d: 1, i: 1, i_clamp: 1}
+	joint_4_upper_forearm_forearm: {p: 100, d: 1, i: 1, i_clamp: 1}
+	joint_5_forearm_wrist: {p: 100, d: 1, i: 1, i_clamp: 1}
+	joint_6_wrist_hand: {p: 100, d: 1, i: 1, i_clamp: 1}
