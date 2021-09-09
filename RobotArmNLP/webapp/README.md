@@ -1,2 +1,4 @@
-Useful UI resources:
-https://codepen.io/ettrics/details/KpzzQZ
+# Webapp structure 
+
+The webapp backend is built using python flask app
+

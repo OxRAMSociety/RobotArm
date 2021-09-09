@@ -109,7 +109,7 @@ header h2{
     height: 150px;
 }
 
-#predict_title{
+.predict_title{
   
   font-size:20px;
   text-align: center;
