@@ -1,0 +1,12 @@
+.logo{
+    margin: 2%; 
+    width: 35%;
+}
+.header{
+    background-color: #fca311; 
+}
+.text{
+    margin: 4%;
+    font-size: 3rem; 
+    font-family: system-ui;
+}
