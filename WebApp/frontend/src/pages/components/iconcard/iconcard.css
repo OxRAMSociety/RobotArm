@@ -1,6 +1,12 @@
-.circle{
+.iccircle{
     width: 150px;
     height: 150px;
     background: #FF4848;
     border-radius: 75px;
 }
+.icicon{
+    position: relative;
+    transform: translate(50%, 50%);
+    height: 50%;
+    width: 50%;
+  }

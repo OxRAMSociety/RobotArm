@@ -6,3 +6,25 @@
     top: 0px;
     background: #101010;
 }
+
+.ic1{
+    position: absolute;
+    left: 95vh;
+    top: 5vh;
+}
+
+.ic2{
+    position: absolute;
+    left: 95vh;
+    top: 72.5vh;
+}
+.ic3{
+    position: absolute;
+    left: 60vh;
+    top: 35vh;
+}
+.ic4{
+    position: absolute;
+    left: 130vh;
+    top: 35vh;
+}
