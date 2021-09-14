@@ -1,8 +1,8 @@
 .iccircle{
-    width: 150px;
-    height: 150px;
+    width: 15vh;
+    height: 15vh;
     background: #FF4848;
-    border-radius: 75px;
+    border-radius: 20vh;
 }
 .icicon{
     position: relative;
@@ -10,3 +10,9 @@
     height: 50%;
     width: 50%;
   }
+
+  
+  .iccircle:hover {
+    box-shadow: 2px 2px 1px #FEC260;
+    background-color: #FCFFA6;
+}

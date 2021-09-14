@@ -1,10 +1,14 @@
 import React from 'react';
 import "./iconcard.css"
-function IconCard() {
+
+interface IconCardProps{
+    img: string
+}
+const IconCard =({img}: IconCardProps)=> {
     return (
         <div className="iccircle">
             <div>
-                <img className="icicon" src={"https://cdn-icons-png.flaticon.com/512/1005/1005531.png"} alt="Icon" />
+                <img className="icicon" src={img} alt="Icon" />
             </div>
         </div>
     )

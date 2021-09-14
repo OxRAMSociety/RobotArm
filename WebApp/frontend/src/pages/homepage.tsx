@@ -1,23 +1,24 @@
 import React from 'react';
-import DashCircle from './components/iconcard/dashcircle/dashcircle';
+import CentralCircle from './components/centralcircle/centralcircle';
+import DashCircle from './components/dashcircle/dashcircle';
 import IconCard from './components/iconcard/iconcard';
 import "./homepage.css"
 function Homepage() {
     return (
-        <div className="background">
-
+        <div className="hmback">
+            <CentralCircle/>
             <DashCircle />
             <div className="ic1">
-                <IconCard />
+                <IconCard img={"https://cdn-icons-png.flaticon.com/512/1005/1005531.png"}/>
             </div>
             <div className="ic2">
-                <IconCard />
+                <IconCard  img={"https://cdn-icons-png.flaticon.com/512/4829/4829729.png"} />
             </div>
             <div className="ic3">
-                <IconCard />
+                <IconCard  img={"https://cdn-icons-png.flaticon.com/512/3079/3079162.png"}/>
             </div>
             <div className="ic4">
-                <IconCard />
+                <IconCard  img={"https://cdn-icons-png.flaticon.com/512/680/680033.png"}/>
             </div>
 
         </div>

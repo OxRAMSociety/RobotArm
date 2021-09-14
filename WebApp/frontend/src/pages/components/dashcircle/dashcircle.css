@@ -1,11 +1,11 @@
 .dashcircle{
     position: absolute;
     border-radius: 50%;
-    width: 70vh;
-    height: 70vh;
     border: 10px dashed #C2FFD9;
     box-sizing: border-box;
-    position: relative;
-    transform: translate(70vh, 15vh)
+    height: 50vh;
+    width: 50vh;
+    transform: translate(calc(50vw - 25vh), 25vh);
+
 
 }

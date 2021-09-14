@@ -1,0 +1,19 @@
+.centralcircle{
+    position: absolute;
+    border-radius: 50%;
+    background-color: #C2FFD9;
+    height: 30vh;
+    width: 30vh;
+    top:0;
+    transform: translate(calc(50vw - 15vh), calc(50vh - 15vh));
+
+
+}
+
+.centrallogo{
+    height: 9vh; 
+    transform: translate(1.5vh, 9vh); 
+    
+    
+  }
+
