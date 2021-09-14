@@ -1,10 +1,13 @@
+import React from 'react';
 import './App.css';
-import Header from './components/header/Header';
+import Homepage from './pages/homepage';
+
+
 
 function App() {
   return (
     <div className="App">
-      <Header text="Robot Arm Controller"/>
+     <Homepage/>
     </div>
   );
 }
