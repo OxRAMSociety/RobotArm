@@ -8,8 +8,20 @@ function Homepage() {
         <div className="hmback">
             <CentralCircle/>
             <DashCircle />
+            <div className="labelpos1">
+                <p className="label">Voice Command</p>
+            </div>
+            <div className="labelpos2">
+                <p className="label">Movement</p>
+            </div>
+            <div className="labelpos3">
+                <p className="label">Planning</p>
+            </div>
+            <div className="labelpos4">
+                <p className="label">Vision</p>
+            </div>
             <div className="ic1">
-                <IconCard img={"https://cdn-icons-png.flaticon.com/512/1005/1005531.png"}/>
+                <IconCard img={"https://cdn-icons-png.flaticon.com/512/2861/2861905.png"}/>
             </div>
             <div className="ic2">
                 <IconCard  img={"https://cdn-icons-png.flaticon.com/512/4829/4829729.png"} />

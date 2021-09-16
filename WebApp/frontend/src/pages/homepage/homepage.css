@@ -1,0 +1,70 @@
+.hmback {
+  background: #3DB2FF;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.ic1 {
+  width: min-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(50vw - 7.5vh), calc(50vh - 25vh - 7.5vh));
+}
+
+.ic2 {
+  width: min-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(50vw - 7.5vh), calc(50vh + 25vh - 7.5vh));
+}
+.ic3 {
+  width: min-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(50vw - 25vh - 7.5vh), calc(50vh - 7.5vh));
+}
+.ic4 {
+  width: min-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(50vw + 25vh - 7.5vh), calc(50vh - 7.5vh));
+}
+
+.label {
+  position: absolute;
+  color: #FFEDDA;
+  font-size: 4vh;
+}
+.labelpos1 {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(50vw - 9.5vh), calc(50vh - 25vh - 20vh));
+}
+
+.labelpos2 {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(calc(50vw - 9.5vh), calc(50vh + 25vh + 7vh));
+}
+.labelpos3 {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(calc(50vw - 25vh - 26vh), calc(50vh - 4vh));
+  }
+  .labelpos4 {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(calc(50vw + 25vh + 10.5vh), calc(50vh - 4vh));
+  }
