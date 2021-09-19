@@ -1,9 +1,13 @@
 from flask import Flask,render_template,url_for,request
+from flask_cors import CORS, cross_origin
 import speech_recognition as sr
 from rasa.nlu.model import Interpreter
 
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 interpreter = None 
 def load_model():
@@ -15,10 +19,11 @@ def home():
 	return render_template('home.html')
 
 @app.route('/record')
+@cross_origin()
 def record():
 	r = sr.Recognizer()
 	with sr.Microphone() as source: 
-		audio = r.listen(source, phrase_time_limit=10)
+		audio = r.listen(source, phrase_time_limit=5)
 	try: 
 		message = (r.recognize_google(audio))
 	except sr.UnknownValueError:
@@ -27,8 +32,8 @@ def record():
 	rasa_data = interpreter.parse(message)
 	my_prediction = ["intent: "+rasa_data['intent']['name']] + [rasa_data['entities'][i]['entity']+": "+rasa_data['entities'][i]['value'] for i in range(len(rasa_data['entities']))]
 
-	return render_template('result.html', message = message, prediction = my_prediction)
-
+	result= {"message": message, "prediction": my_prediction}
+	return result
 
 
 
