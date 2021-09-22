@@ -1,5 +1,5 @@
 .hmback {
-  background: #150050;
+  background: black;
   min-height: 100vh;
   height: 100%;
 }
@@ -36,7 +36,7 @@
 
 .label {
   position: absolute;
-  color: #FFEDDA;
+  color:#EDEEF7;
   font-size: 4vh;
 }
 .labelpos1 {
