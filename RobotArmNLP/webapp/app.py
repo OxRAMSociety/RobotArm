@@ -2,7 +2,7 @@ from flask import Flask,render_template,url_for,request
 from flask_cors import CORS, cross_origin
 import speech_recognition as sr
 from rasa.nlu.model import Interpreter
-
+import json
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -44,8 +44,22 @@ def predict():
 	message = "null"
 	message = request.args["message"]
 	rasa_data = interpreter.parse(message)
-	prediction = {"prediction": ["intent: "+rasa_data['intent']['name']] + [rasa_data['entities'][i]['entity']+": "+rasa_data['entities'][i]['value'] for i in range(len(rasa_data['entities']))]}
-	return prediction
+	value = {
+        "prediction": [
+            {
+                "title": "intent",
+                "value": rasa_data['intent']['name']+"}"
+            },
+        ]+[
+            {
+                "title": rasa_data['entities'][i]['entity'],
+                "value": rasa_data['entities'][i]['value'],
+            }
+
+            for i in range(len(rasa_data['entities']))
+        ]
+    }
+	return json.dumps(value)
 
 
 
