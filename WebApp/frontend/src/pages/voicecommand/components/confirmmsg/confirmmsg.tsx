@@ -11,6 +11,7 @@ const ConfirmMessage = ({ message }: ConfirmMessageProps) => {
     setConfirm(true);
   };
 
+  console.log("Hello")
   return (
     <div>
       <div>
