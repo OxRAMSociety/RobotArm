@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ConfirmMessage from "./components/confirmmsg/confirmmsg";
 import RecordBtn from "./components/recordbtn/recordbtn";
 import "./VoiceCommandPage.css";
@@ -6,11 +6,18 @@ interface dataObject {
   message: string;
 }
 
+interface InputChangeInterface {
+  target: HTMLInputElement;
+}
+
 function VoiceCommandPage() {
   const [isRecording, setIsRecording] = useState(false);
   const [data, setData] = useState<dataObject>();
   const [typedMessage, setTypedMessage] = useState("");
-  const [isTyped, setIsTyped] = useState(false); 
+  const [isTyped, setIsTyped] = useState(false);
+
+  const typedMessageForm = useRef<HTMLInputElement>(null);
+
   const recordHandler = () => {
     setIsRecording(true);
     fetch("http://127.0.0.1:5000/record")
@@ -22,16 +29,31 @@ function VoiceCommandPage() {
   };
 
   const submitHandler = () => {
-    console.log(typedMessage)
-    setIsTyped(true)
-  
+    if (typedMessageForm.current !== null) {
+      setTypedMessage(typedMessageForm.current.value);
+      setIsTyped(true);
+    }
   };
 
   if (data) {
     return (
-      <div>
-        <div onClick={recordHandler}>
+      <div className="vcpfullpage">
+        <div className="recordbutton" onClick={recordHandler}>
           <RecordBtn active={isRecording} />
+        </div>
+        <p className="vcpp"> OR </p>
+        <p className="vcpp"> Enter Command</p>
+
+        <div className="vcpinput">
+          <input
+            type="text"
+            ref={typedMessageForm}
+            // onChange={(e)=>{setTypedMessage(e.target.value)}}
+          />
+          <button type="button" onClick={submitHandler} className="submitBtn">
+            {" "}
+            Submit{" "}
+          </button>
         </div>
         <ConfirmMessage message={data.message} />
       </div>
@@ -40,9 +62,23 @@ function VoiceCommandPage() {
 
   if (isTyped) {
     return (
-      <div>
-        <div onClick={recordHandler}>
+      <div className="vcpfullpage">
+        <div className="recordbutton" onClick={recordHandler} >
           <RecordBtn active={isRecording} />
+        </div>
+        <p className="vcpp"> OR </p>
+        <p className="vcpp"> Enter Command</p>
+
+        <div className="vcpinput">
+          <input
+            type="text"
+            ref={typedMessageForm}
+            // onChange={(e)=>{setTypedMessage(e.target.value)}}
+          />
+          <button type="button" onClick={submitHandler} className="submitBtn">
+            {" "}
+            Submit{" "}
+          </button>
         </div>
         <ConfirmMessage message={typedMessage} />
       </div>
@@ -50,21 +86,24 @@ function VoiceCommandPage() {
   }
 
   return (
-    <div>
+    <div className="vcpfullpage">
       <div className="recordbutton" onClick={recordHandler}>
         <RecordBtn active={isRecording} />
       </div>
-      <p> OR </p>
-      <h1> Enter Command</h1>
-      <input
-        type="text"
-        onChange={(text) => setTypedMessage(text.target.value)}
-        defaultValue={"Enter command"}
-      />
-      <button type="button" onClick={submitHandler}>
-        {" "}
-        Submit{" "}
-      </button>
+      <p className="vcpp"> OR </p>
+      <p className="vcpp"> Enter Command</p>
+
+      <div className="vcpinput">
+        <input
+          type="text"
+          ref={typedMessageForm}
+          // onChange={(e)=>{setTypedMessage(e.target.value)}}
+        />
+        <button type="button" onClick={submitHandler} className="submitBtn">
+          {" "}
+          Submit{" "}
+        </button>
+      </div>
     </div>
   );
 }

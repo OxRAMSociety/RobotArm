@@ -1,31 +1,10 @@
-.recbtncircle {
-  width: 15vh;
-  height: 15vh;
-  background: #ff4848;
-  border-radius: 20vh;
+.confirmMessage{
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-.recbtnactive:hover{
-  box-shadow: 0 0.3em 1em ;
-}
-
-.recbtnicon {
-  position: relative;
-  transform: translate(50%, 50%);
-  height: 50%;
-  width: 50%;
-}
-
-.recbtnactive {
-  width: 15vh;
-  height: 15vh;
-  background: #36454F;
-  border-radius: 20vh;
-}
-
-.recbtnactive:hover{
-  box-shadow: 0 0.3em 1em ;
-}
-.recbtncircle:hover{
-  box-shadow: 0 0.3em 1em ;
+.confirmPrompt{
+  font-weight: bolder;
 }

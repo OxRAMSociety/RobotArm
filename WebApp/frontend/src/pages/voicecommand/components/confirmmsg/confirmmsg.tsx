@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Prediction from "../prediction/prediction";
+import "./confirmmsg.css"
 
 interface ConfirmMessageProps {
   message: string;
@@ -11,14 +12,14 @@ const ConfirmMessage = ({ message }: ConfirmMessageProps) => {
     setConfirm(true);
   };
 
-  console.log("Hello")
+  console.log("rerendered")
   return (
-    <div>
+    <div className="confirmMessage">
       <div>
-        <p>Did I catch you correctly?</p>
+        <h4 className="confirmPrompt">Did I catch you correctly?</h4>
         <p>{message}</p>
         <Prediction message={message} />
-        <button onClick={toggleConfirm}>Confirm</button>
+        <button onClick={toggleConfirm} className="submitBtn">Confirm</button>
       </div>
     </div>
   );
