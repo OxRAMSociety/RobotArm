@@ -60,6 +60,7 @@ while active:
     cv2_aruco_output = cv2.aruco.detectMarkers(frame, arucoDict,
         parameters=arucoParams)
     (corners, ids, rejected) = cv2_aruco_output
+    print(corners)
 
     # Plot markers
     centres = plot_markers(cv2_aruco_output, frame)

@@ -41,7 +41,7 @@ def draw_boxes(frame, box_data, line_thickness=4, color=(255, 0, 0)):
             )
             # Label
             label = f"{class_names[int(box[5])]}: {box[4]:.2f}"
-            font_thickness = max(line_thickness - 1, 1)
+            font_thickness = max(line_thickness - 4, 1)
             t_size = cv2.getTextSize(
                 label, 0, 
                 fontScale=line_thickness / 3, 

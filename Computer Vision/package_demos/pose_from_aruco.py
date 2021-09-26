@@ -47,7 +47,7 @@ def clean_angles(angle):
     return angle
 
 # Load previously saved data
-with open('./camera_data.pkl', 'rb') as file:
+with open('camera_data.pkl', 'rb') as file:
     mtx, dist = pickle.load(file)
 
 # Define Aruco markers being used
@@ -67,7 +67,7 @@ while active:
 
     # Unidistort the image
     map1, map2 = cv2.fisheye.initUndistortRectifyMap(mtx, dist, np.eye(3), mtx, gray.shape[:2][::-1], cv2.CV_16SC2)
-    img = cv2.remap(gray, map1, map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+    img = cv2.remap(img, map1, map2, interpolation=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
 
     #### Do aruco stuff
 
@@ -78,19 +78,19 @@ while active:
 
     plot_markers(cv2_aruco_output, img)
 
-    # If there were any detected
-    if np.all(ids != None):
-        # POSE ESTIMATION
-        rvec, trans,_ = cv2.aruco.estimatePoseSingleMarkers(corners, 0.1, mtx, dist) 
-        # # Convert to rotation matrix
-        # rot = cv2.Rodrigues(rvec)
-        # x, y, z = trans[0][0]
-        # rho, theta, phi = list(map(clean_angles, rvec[0][0]))
-        # print(f"x: {round(x,2)}, y: {round(y,2)}, z: {round(z,2)}")
-        # print(f"rho: {rho}, theta: {theta}, phi: {phi}")
-        # print("")
-        for r, t in zip(rvec, trans):
-            img = cv2.aruco.drawAxis(img, mtx, dist, r, t, length=0.2)
+    # # If there were any detected
+    # if np.all(ids != None):
+    #     # POSE ESTIMATION
+    #     rvec, trans,_ = cv2.aruco.estimatePoseSingleMarkers(corners, 0.1, mtx, dist) 
+    #     # # Convert to rotation matrix
+    #     # rot = cv2.Rodrigues(rvec)
+    #     # x, y, z = trans[0][0]
+    #     # rho, theta, phi = list(map(clean_angles, rvec[0][0]))
+    #     # print(f"x: {round(x,2)}, y: {round(y,2)}, z: {round(z,2)}")
+    #     # print(f"rho: {rho}, theta: {theta}, phi: {phi}")
+    #     # print("")
+    #     for r, t in zip(rvec, trans):
+    #         img = cv2.aruco.drawAxis(img, mtx, dist, r, t, length=0.2)
     ###
 
     cv2.imshow('img',img)
