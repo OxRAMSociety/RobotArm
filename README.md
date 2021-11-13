@@ -1,4 +1,4 @@
-![oxarm](https://user-images.githubusercontent.com/6771224/116750510-7e406680-a9fa-11eb-9fa7-3f0af11f29ea.png)
+![logo](https://user-images.githubusercontent.com/6771224/141656663-96ae20bf-9eaf-4808-b145-5f7c027ac39d.png)
 
 <p align="center">
     <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/ox3dp?style=social">
