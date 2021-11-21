@@ -30,7 +30,8 @@ The goal of the project is to build a robotic arm using free and open source res
 
 One of our main goals is to *provide the arm with a camera* to give it a certain degree of autonomy via image processing and machine learning techniques. As a first *toy application*, the arm will be able to *play chess*, being able to recognize and interact with a physical board and its chess pieces.
 
-> **NOTE** that this is a highly WIP project and works on the hardware side have been slowed down by the pandemic and the inability to access our workshop. We are in the process of re...
+> **NOTE** that this is a highly WIP project and works on the hardware side have been slowed down by the pandemic and the inability to access our workshop.
+> We are in the process of resuming the works at the moment.
 
 ## Features
 
