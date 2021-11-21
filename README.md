@@ -30,7 +30,7 @@ The goal of the project is to build a robotic arm using free and open source res
 
 One of our main goals is to *provide the arm with a camera* to give it a certain degree of autonomy via image processing and machine learning techniques. As a first *toy application*, the arm will be able to *play chess*, being able to recognize and interact with a physical board and its chess pieces.
 
-**NOTE** that this is a highly WIP project and works on the hardware side have been slowed down by the pandemic and the inability to access our workshop. We are in the process of re...
+> **NOTE** that this is a highly WIP project and works on the hardware side have been slowed down by the pandemic and the inability to access our workshop. We are in the process of re...
 
 ## Features
 
@@ -38,14 +38,14 @@ One of our main goals is to *provide the arm with a camera* to give it a certain
 - The electronics are based on the [BCN3D MOVEO] arm
     - The schematics are being reworked to manage the additional degree of freedom
     - A combination of [Arduino Mega 2560] and [RAMPS 1.4 shield] is used in place of the custom [SlushEngine Model D 7] stepper motor driver to minimise costs
-- [ROS] is used to power the software side of the arm and to provide a *simulation environment*;
-- Ability to understand (domain-specific) input voice commands (English and Chinese);
-- Ability to perform (domain-specific) object detection and recognition through a camera mounted on the gripper.
+- [ROS] is used to power the software side of the arm and to provide a *simulation environment*
+- Ability to understand (domain-specific) input voice commands (English and Chinese)
+- Ability to perform (domain-specific) object detection and recognition through a camera mounted on the gripper
 
 ## Acknowledgements
 
 - [RBX1] and [BCN3D MOVEO] 3D arm designs
-- [ROS] software stack;
+- [ROS] software stack
 <!-- - Blender -->
 <!-- - software used for voice rec? -->
 <!-- - software used for training image rec? -->
@@ -53,9 +53,8 @@ One of our main goals is to *provide the arm with a camera* to give it a certain
 ## Sponsors
 
 The code in this repository is licensed under the [MIT License](LICENSE), unless otherwise stated.
-Any other resources (e.g., documentation, media resources) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
 
-## License
+Any other resources (e.g., documentation, media resources) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
 
 <!-- Resources -->
 
