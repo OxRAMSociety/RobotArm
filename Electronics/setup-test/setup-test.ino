@@ -105,10 +105,10 @@ void setup() {
 
 void loop () {
 
-  if (millis() % 1000 < 500)
+  //if (millis() % 1000 < 500)
     digitalWrite(LED_PIN, HIGH);
-  else
-    digitalWrite(LED_PIN, LOW);
+  //else
+    //digitalWrite(LED_PIN, LOW);
 
   if (millis() % 10000 < 5000) {
     digitalWrite(X_DIR_PIN    , HIGH);
