@@ -23,30 +23,38 @@
  */
 
 /* A small script to test if Arduino MEGA and RAMPS 1.4 have been setup
- * properly with 5 stepper motors.
+ * properly with 6 stepper motors.
  *
  * This is heavily based on the snippet of code provided here:
  *
  *      https://reprap.org/wiki/RAMPS_1.4#RAMPS_1.4_test_code
+ *
+ * The sixth stepper motor is connected to the RAMPS via a stepper motor
+ * extender powered separately and connected to RAMPS via a set of pins
+ * in the AUX-2 cluster. See
+ *
+ *      https://github.com/OxRAMSociety/RobotArm/wiki/Arduino-and-RAMPS#extending-the-board
+ * 
+ * for more details
  */
 
 #define X_STEP_PIN         54
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
-#define X_MIN_PIN           3
-#define X_MAX_PIN           2
+/* #define X_MIN_PIN           3 */
+/* #define X_MAX_PIN           2 */
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
-#define Y_MIN_PIN          14
-#define Y_MAX_PIN          15
+/* #define Y_MIN_PIN          14 */
+/* #define Y_MAX_PIN          15 */
 
 #define Z_STEP_PIN         46
 #define Z_DIR_PIN          48
 #define Z_ENABLE_PIN       62
-#define Z_MIN_PIN          18
-#define Z_MAX_PIN          19
+/* #define Z_MIN_PIN          18 */
+/* #define Z_MAX_PIN          19 */
 
 #define E_STEP_PIN         26
 #define E_DIR_PIN          28
@@ -55,6 +63,10 @@
 #define Q_STEP_PIN         36
 #define Q_DIR_PIN          34
 #define Q_ENABLE_PIN       30
+
+#define A_STEP_PIN         42
+#define A_DIR_PIN          40
+#define A_ENABLE_PIN       44
 
 /* #define SDPOWER            -1 */
 /* #define SDSS               53 */
@@ -96,11 +108,16 @@ void setup() {
   pinMode(Q_DIR_PIN, OUTPUT);
   pinMode(Q_ENABLE_PIN, OUTPUT);
 
+  pinMode(A_STEP_PIN, OUTPUT);
+  pinMode(A_DIR_PIN, OUTPUT);
+  pinMode(A_ENABLE_PIN, OUTPUT);
+
   digitalWrite(X_ENABLE_PIN, LOW);
   digitalWrite(Y_ENABLE_PIN, LOW);
   digitalWrite(Z_ENABLE_PIN, LOW);
   digitalWrite(E_ENABLE_PIN, LOW);
   digitalWrite(Q_ENABLE_PIN, LOW);
+  digitalWrite(A_ENABLE_PIN, LOW);
 }
 
 void loop () {
@@ -116,12 +133,14 @@ void loop () {
     digitalWrite(Z_DIR_PIN, HIGH);
     digitalWrite(E_DIR_PIN, HIGH);
     digitalWrite(Q_DIR_PIN, HIGH);
+    digitalWrite(A_DIR_PIN, HIGH);
   } else {
     digitalWrite(X_DIR_PIN, LOW);
     digitalWrite(Y_DIR_PIN, LOW);
     digitalWrite(Z_DIR_PIN, LOW);
     digitalWrite(E_DIR_PIN, LOW);
     digitalWrite(Q_DIR_PIN, LOW);
+    digitalWrite(A_DIR_PIN, LOW);
   }
 
   digitalWrite(X_STEP_PIN, HIGH);
@@ -129,6 +148,7 @@ void loop () {
   digitalWrite(Z_STEP_PIN, HIGH);
   digitalWrite(E_STEP_PIN, HIGH);
   digitalWrite(Q_STEP_PIN, HIGH);
+  digitalWrite(A_STEP_PIN, HIGH);
 
   delay(1);
 
@@ -137,4 +157,5 @@ void loop () {
   digitalWrite(Z_STEP_PIN, LOW);
   digitalWrite(E_STEP_PIN, LOW);
   digitalWrite(Q_STEP_PIN, LOW);
+  digitalWrite(A_STEP_PIN, LOW);
 }
