@@ -56,9 +56,13 @@ One of our main goals is to *provide the arm with a camera* to give it a certain
 
 ## Sponsors
 
+`todo`
+
+## License
+
 The code in this repository is licensed under the [MIT License](LICENSE), unless otherwise stated.
 
-Any other resources (e.g., documentation, media resources) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
+Any other resources (e.g., documentation, media) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/), unless otherwise stated.
 
 <!-- Resources -->
 
