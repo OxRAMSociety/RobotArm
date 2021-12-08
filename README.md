@@ -18,6 +18,9 @@ Teaching a robotic arm how to interact with the world.
 <a href="LICENSE">
     <img src="https://img.shields.io/github/license/OxRAMSociety/RobotArm.svg?style=for-the-badge" alt="License badge">
 </a>
+<a href="mailto:project.robotarm@oxramsociety.org">
+    <img src="https://img.shields.io/badge/Contact_Us-0078D4?style=for-the-badge&logo=maildotru" alt="Email">
+</a>
 <br/><br/>
 <img alt="Twitter Follow button" src="https://img.shields.io/twitter/follow/ox3dp?style=social">
 </p>
