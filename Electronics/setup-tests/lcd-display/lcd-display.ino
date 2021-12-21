@@ -4,8 +4,8 @@
 
 /** Resources
  *
- * Picture of pin layout (with names):
- *      https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/l/c/lcd12864-st-3.3v-blue-4.jpg
+ * Picture of adapter and pinout (with names):
+ *      https://reprap.org/wiki/RepRapDiscount_Full_Graphic_Smart_Controller
  *
  * Note: you can test the pin association between LCD and RAMPS
  * checking for continuity with a multimeter.
@@ -110,7 +110,7 @@ void setup() {
   do {
     /* u8g2.setDrawColor(1); */
     u8g2.setBitmapMode(1); // Transparent mode
-    u8g2.drawXBM(22, 61, OXRAM_WIDTH, OXRAM_HEIGHT, oxram_logo_bits);
+    u8g2.drawXBM(22, 2, OXRAM_WIDTH, OXRAM_HEIGHT, oxram_logo_bits);
   } while ( u8g2.nextPage() );
 
   delay(3000);
@@ -137,7 +137,7 @@ void loop() {
 
     /* Welcome screen */
     u8g2.setFont(u8g2_font_ncenB14_tr);
-    u8g2.drawStr(0,39,"Hello OxRAM!");
+    u8g2.drawStr(6,39,"Hi, OxRAM!");
 
     /* Chess pieces */
     u8g2.setFont(u8g2_font_unifont_t_symbols);
