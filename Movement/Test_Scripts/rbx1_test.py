@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # This script acts as a test for basic functions by which to control the arm
 
@@ -88,7 +88,7 @@ def jmove(j1,j2,j3,j4,j5,j6):
 	plan = arm.plan()
 	arm.go(wait=True)
 	arm.stop()
-        arm.clear_pose_targets()
+	arm.clear_pose_targets()
 
 
 
@@ -115,7 +115,7 @@ def pmove(coords,rotation_vector,rotation_angle):
 	plan = arm.plan()
 	arm.go(wait=True)
 	arm.stop()
-        arm.clear_pose_targets()
+	arm.clear_pose_targets()
 
 
 
@@ -127,7 +127,7 @@ def pmovesimple(coords):
 	plan = arm.plan()
 	arm.go(wait=True)
 	arm.stop()
-        arm.clear_pose_targets()
+	arm.clear_pose_targets()
 
 
 
