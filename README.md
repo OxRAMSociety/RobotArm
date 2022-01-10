@@ -29,7 +29,7 @@ Teaching a robotic arm how to interact with the world.
 
 This is a public repository gathering all the code and resources related to the OxRAM Robot Arm project.
 
-The goal of the project is to build a robotic arm using free and open source resources, including software, electronics and 3D printed design. We are using [RBX1] as the initial arm desing and [ROS] as the software stack to program and interact with the arm.
+The goal of the project is to build a robotic arm using free and open source resources, including software, electronics and 3D printed design. We are using [RBX1] as the initial arm design and [ROS] as the software stack to program and interact with the arm.
 
 One of our main goals is to *provide the arm with a camera* to give it a certain degree of autonomy via image processing and machine learning techniques. As a first *toy application*, the arm will be able to *play chess*, being able to recognize and interact with a physical board and its chess pieces.
 
