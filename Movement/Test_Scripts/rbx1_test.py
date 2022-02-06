@@ -23,9 +23,9 @@ rospy.init_node('moving_arm_livecode', anonymous=True)
 # Setup moveit_commander essentials
 robot = moveit_commander.RobotCommander()
 scene = moveit_commander.PlanningSceneInterface()
-arm = moveit_commander.MoveGroupCommander("arm")
+arm = moveit_commander.MoveGroupCommander("rbx1_arm")
 arm_frame = arm.get_planning_frame()
-gripper = moveit_commander.MoveGroupCommander("gripper")
+gripper = moveit_commander.MoveGroupCommander("rbx1_gripper")
 gripper_frame = gripper.get_planning_frame()
 display_trajectory_publisher = rospy.Publisher('/move_group/display_planned_path', DisplayTrajectory, queue_size = 20)
 
