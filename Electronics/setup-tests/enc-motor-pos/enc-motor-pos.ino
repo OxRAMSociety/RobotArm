@@ -61,7 +61,7 @@ AccelStepper motorY(AccelStepper::DRIVER, Y_STEP_PIN, Y_DIR_PIN);
 U8G2_ST7920_128X64_1_SW_SPI u8g2(U8G2_R0, LCD_SCK , LCD_MOSI, LCD_CS);
 
 /* Motors target position */
-long position[2];
+long positions[2];
 long pos = 0;
 
 /* Setup a single stepper motor */
@@ -88,8 +88,8 @@ void setup() {
   motors.addStepper(&motorY);
 
   /* Set motors target */
-  positions[0] = dist;
-  positions[1] = dist;
+  positions[0] = pos;
+  positions[1] = pos;
   motors.moveTo(positions);
 
   /* Splash screen */
@@ -106,10 +106,10 @@ void loop() {
   /* Update encoder state */
   enc_curr_state = enc.read();
   /* Update target position */
-  dist += (enc_curr_state - enc_prev_state)*10;
+  pos += 10*(enc_curr_state - enc_prev_state);
   enc_prev_state = enc_curr_state;
-  positions[0] = dist;
-  positions[1] = dist;
+  positions[0] = pos;
+  positions[1] = pos;
   motors.moveTo(positions);
 
   /* Run motors (at most one step per motor) */
