@@ -55,23 +55,23 @@ U8G2_ST7920_128X64_1_SW_SPI u8g2(U8G2_R0, LCD_SCK , LCD_MOSI, LCD_CS);
 
 /* Positions */
 size_t pos = 0;
-long positions[] = {
-  180,   11,  201,   -7,  675,  -74,
-  927,  374,   33,  426,  414,  219,
-   84, 1109,  654,  863,  237,  840,
-    8,   -3, -273,  -84,  506,  567,
-    7, -929,  704,   63,  247,   80,
-   77,  784,  106,  742,   91,  847,
-  431,  -51,  950,   71,  500,    3,
- -144,  892,   46,  467,  373,   10,
-  562,   82,  974,   48,   67,  575,
-   86,   71,   99,  728,    1,   89,
-    0,    0,    0,    0,    0,    0, NULL
+long positions[][6] = {
+ { 180,   11,  201,   -7,  675,  -74 },
+ { 927,  374,   33,  426,  414,  219 },
+ {  84, 1109,  654,  863,  237,  840 },
+ {   8,   -3, -273,  -84,  506,  567 },
+ {   7, -929,  704,   63,  247,   80 },
+ {  77,  784,  106,  742,   91,  847 },
+ { 431,  -51,  950,   71,  500,    3 },
+ {-144,  892,   46,  467,  373,   10 },
+ { 562,   82,  974,   48,   67,  575 },
+ {  86,   71,   99,  728,    1,   89 },
+ {   0,    0,    0,    0,    0,    0 }, NULL
 };
 
 /* Setup a single stepper motor */
 void setup_motor(AccelStepper* motor, uint8_t pin) {
-  motor->setEnablePin(pin);
+  motor->setEnablePin(pin); 
   motor->setPinsInverted(false,false,true);
   motor->setMaxSpeed(MAX_SPEED);
   motor->enableOutputs(); // Don't forget this!
@@ -79,20 +79,21 @@ void setup_motor(AccelStepper* motor, uint8_t pin) {
 
 void setup() {
   //pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
 
   /* Stepper motors */
   setup_motor(&motorX, X_ENABLE_PIN);
-  motors.addStepper(&motorX);
+  motors.addStepper(motorX);
   setup_motor(&motorY, Y_ENABLE_PIN);
-  motors.addStepper(&motorY);
+  motors.addStepper(motorY);
   setup_motor(&motorZ, Z_ENABLE_PIN);
-  motors.addStepper(&motorZ);
+  motors.addStepper(motorZ);
   setup_motor(&motorE, E_ENABLE_PIN);
-  motors.addStepper(&motorE);
+  motors.addStepper(motorE);
   setup_motor(&motorQ, Q_ENABLE_PIN);
-  motors.addStepper(&motorQ);
+  motors.addStepper(motorQ);
   setup_motor(&motorA, A_ENABLE_PIN);
-  motors.addStepper(&motorA);
+  motors.addStepper(motorA);
 
   motors.moveTo(positions[pos]);
 
@@ -102,6 +103,20 @@ void setup() {
   do {
     u8g2.setBitmapMode(1); // Transparent mode
     u8g2.drawXBM(22, 2, OXRAM_WIDTH, OXRAM_HEIGHT, oxram_logo_bits);
+      u8g2.setCursor(0,15);
+      u8g2.print("Current target:");
+      u8g2.setCursor(0,30);
+      u8g2.print(positions[pos]);
+      u8g2.print(", ");
+      u8g2.print(positions[pos]+1);
+      u8g2.print(", ");
+      u8g2.print(positions[pos]+2);
+      u8g2.setCursor(0,45);
+      u8g2.print(positions[pos]+3);
+      u8g2.print(", ");
+      u8g2.print(positions[pos]+4);
+      u8g2.print(", ");
+      u8g2.print(positions[pos]+5);
   } while ( u8g2.nextPage() );
   delay(2000);
 }
@@ -111,29 +126,30 @@ void loop() {
    * have reached their target.
    */
   if (!motors.run()) {
+ 
     /* Compute new target position */
-    if ((pos+=6) == NULL) {
+    if ((positions[pos]) == NULL) {
         pos = 0;
     }
+    pos++;
     motors.moveTo(positions[pos]);
     /* Update LCD display */
     u8g2.firstPage();
     do {
-      //u8g2.clear();
       u8g2.setCursor(0,15);
       u8g2.print("Current target:");
       u8g2.setCursor(0,30);
       u8g2.print(positions[pos]);
       u8g2.print(", ");
-      u8g2.print(positions[pos+1]);
+      u8g2.print(positions[pos]+1);
       u8g2.print(", ");
-      u8g2.print(positions[pos+2]);
-      u8g2.setCursor(0,30);
-      u8g2.print(positions[pos+3]);
+      u8g2.print(positions[pos]+2);
+      u8g2.setCursor(0,45);
+      u8g2.print(positions[pos]+3);
       u8g2.print(", ");
-      u8g2.print(positions[pos+4]);
+      u8g2.print(positions[pos]+4);
       u8g2.print(", ");
-      u8g2.print(positions[pos+5]);
+      u8g2.print(positions[pos]+5);
     } while ( u8g2.nextPage() );
     delay(1000);
   }
