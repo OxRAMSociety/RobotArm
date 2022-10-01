@@ -11,7 +11,7 @@ def callback(message):
 	
 	processed_order = message.data*message.data	# Process order (i.e. square it)
 	
-	rospy.loginfo("Processed Order: %d",processed_order)
+	rospy.loginfo("Processed Order: %d \n ---",processed_order)
 	
 	pub.publish(std_msgs.msg.Int16(processed_order))	# Publish processed order
 

@@ -7,9 +7,9 @@ import std_msgs.msg	# Imports the standard ROS message types
 def callback(message):
 
 	# For this simple case, just print the message received in Terminal
-	rospy.loginfo("Message Received: %s",message.data)
+	rospy.loginfo("Message Received: %s \n ---",message.data)
 
-if __name__ == '__main__':	# Write your main code in here!
+if __name__ == '__main__':	# Write your main code in here! It will only run if this file is the main program being executed (i.e. it isn't being imported)
 
 	# Set up a new ROS node to act as the subscriber:
 	rospy.init_node('Example_Subscriber')

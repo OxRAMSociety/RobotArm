@@ -17,8 +17,14 @@ r = rospy.Rate(1)	# 1 Hz
 
 while not rospy.is_shutdown():	# While this node has not been terminated:
 
-	# Publish the message "Example_Message" to Example_Topic
-	pub.publish(std_msgs.msg.String("Example_Message"))
+	# Instantiate the message variable "Example_Message"
+	message = std_msgs.msg.String("Example_Message")
+
+	# Publish the message to Example_Topic
+	pub.publish(message)
+
+	# Print the message published
+	rospy.loginfo("Message Published: %s \n ---",message.data)
 	
 	# Sleep for an amount of time determined by the publishing frequency (1 second here)
 	r.sleep()

@@ -5,7 +5,7 @@ import std_msgs.msg
 
 def callback(message):
 
-	rospy.loginfo("Square Number Received: %d",message.data)	# Display received square number
+	rospy.loginfo("Square Number Received: %d \n ---",message.data)	# Display received square number
 
 
 if __name__ == '__main__':

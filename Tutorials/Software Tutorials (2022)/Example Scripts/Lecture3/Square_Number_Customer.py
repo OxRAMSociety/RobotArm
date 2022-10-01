@@ -15,7 +15,7 @@ while not rospy.is_shutdown():
 	
 	order = random.randint(1,10)	# Randomly generate a new order
 	
-	rospy.loginfo("Number to be Squared: %d",order)
+	rospy.loginfo("Number to be Squared: %d \n ---",order)
 	
 	pub.publish(std_msgs.msg.Int16(order))	# Publish order
 	
